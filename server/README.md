@@ -2,18 +2,22 @@
 
 ## Server
 
-### Model
+### Address
 
-Food
-- Title
-- Cost
+#### member
+#### restaurant
+
+### Model
 
 Restaurant
 
 - Title
 - Represented Menu
 - Foods (Array)
+    - Title
+    - Cost
 - Time
+- Day
 - Location
 - Comment (Array)
 - Like 
