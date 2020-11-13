@@ -1,3 +1,5 @@
+const bcrpyt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
