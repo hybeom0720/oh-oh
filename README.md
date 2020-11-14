@@ -8,9 +8,24 @@
 </p>
 
 
+## 📌 Demo
+ 사이트 바로가기: [link](#)
+#### [핵심 기능]
+~~~
+1. 📝
+2. 추가
+3. 추가
+~~~
+## 👀 Quick Start
 
+## 🦁 Members
+  [류지현](#) [박주혜]() [윤기석]() [이상경]() [허영범]() [(최상하)]()
 
 ## 📊 DB Model
 
 
 ## 🗂 Directory
+
+## 🚨 Rules
+
+[컨벤션 규칙들](https://github.com/hybeom0720/oh-oh/wiki/Rules)
