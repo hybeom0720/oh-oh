@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
+    "allowImportExportEverywhere": true
+  },
+  "plugins": ["prettier", "react"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "prettier/prettier": "error",
+    "no-unused-vars": 0,  // 0 이면 경고/알림 사라짐, 1 이면 경고만뜸, 2 빨간줄생성
+    "no-console": 0,     // console 써도 노란줄 생성 안되게끔
+    "no-undef": 0,
+    "no-alert": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
