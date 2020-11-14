@@ -1,14 +1,16 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import GlobalStyle from "./styles/GlobalStyle.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <>
+      <GlobalStyle>
+        <Switch>
+          <Route exact path="/"></Route>
+        </Switch>
+      </GlobalStyle>
+    </>
   );
 }
 

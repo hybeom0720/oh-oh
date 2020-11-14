@@ -8,7 +8,7 @@
     "allowImportExportEverywhere": true
   },
   "plugins": ["prettier", "react"],
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "extends": ["plugin:prettier/recommended","prettier/react"],
   "rules": {
     "react/jsx-filename-extension": 0,
     "prettier/prettier": "error",
