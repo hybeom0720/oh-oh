@@ -9,12 +9,12 @@ import {
   Detail,
   Error,
 } from "./pages/index.js";
-import GlobalStyle from "./styles/GlobalStyle.js";
+import { GlobalStyle, Layout } from "./styles/index.js";
 
 function App() {
   return (
-    <>
-      <GlobalStyle>
+    <GlobalStyle>
+      <Layout>
         <Switch>
           <Route exact path="/" component={Intro}></Route>
           <Route path="/mainMap" component={MainMap}></Route>
@@ -23,8 +23,8 @@ function App() {
           <Route path="/report" component={Detail}></Route>
           <Route path="/*" component={Error}></Route>
         </Switch>
-      </GlobalStyle>
-    </>
+      </Layout>
+    </GlobalStyle>
   );
 }
 
