@@ -1,11 +1,11 @@
 import React from "react";
 
-function Intro() {
+function Error() {
   return (
     <>
-      <h1>INTRO</h1>
+      <h1>Error</h1>
     </>
   );
 }
 
-export default Intro;
+export default Error;
