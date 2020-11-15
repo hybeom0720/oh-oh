@@ -58,16 +58,11 @@ table {
   color: #212529;
   box-sizing: border-box;
 }
-
 body, html {
   width: 100%;
   height: 100vh;
-}
+  background-color: #FaFaFa;
 
-@media only screen and (min-width: 768px) {
-  body, html {
-    width: 768px;
-  }
 }
 `;
 

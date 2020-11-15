@@ -1,16 +1,16 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import GlobalStyle from "./styles/GlobalStyle.js";
+import { GlobalStyle, Layout } from "./styles/index.js";
 
 function App() {
   return (
-    <>
-      <GlobalStyle>
+    <GlobalStyle>
+      <Layout>
         <Switch>
           <Route exact path="/"></Route>
         </Switch>
-      </GlobalStyle>
-    </>
+      </Layout>
+    </GlobalStyle>
   );
 }
 
