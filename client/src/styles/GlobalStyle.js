@@ -4,13 +4,6 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import palette from "./palette";
 
 const GlobalStyleWrapper = createGlobalStyle`
-*{
-    font-size: 62.5%;
-    font-family: 'Spoqa Han Sans', 'Sans-serif';
-    color: #212529;
-    box-sizing: border-box;
-  }
-
  /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,7 +52,23 @@ table {
 	border-spacing: 0;
 } 
 
+*{
+  font-size: 62.5%;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  color: #212529;
+  box-sizing: border-box;
+}
 
+body, html {
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+  body, html {
+    width: 768px;
+  }
+}
 `;
 
 function GlobalStyle({ children }) {
@@ -67,6 +76,7 @@ function GlobalStyle({ children }) {
     <>
       <ThemeProvider theme={palette}>
         <GlobalStyleWrapper />
+        {children}
       </ThemeProvider>
     </>
   );
