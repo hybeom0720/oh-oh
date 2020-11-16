@@ -16,12 +16,12 @@ function App() {
     <GlobalStyle>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Intro}></Route>
-          <Route path="/mainMap" component={MainMap}></Route>
-          <Route path="/searchMap" component={SearchMap}></Route>
-          <Route path="/report" component={Report}></Route>
-          <Route path="/report" component={Detail}></Route>
-          <Route path="/*" component={Error}></Route>
+          <Route exact path="/" render={() => <Intro />}></Route>
+          <Route path="/mainMap" render={() => <MainMap />}></Route>
+          <Route path="/searchMap" render={() => <SearchMap />}></Route>
+          <Route path="/report" render={() => <Report />}></Route>
+          <Route path="/detail" render={() => <Detail />}></Route>
+          {/* <Route path="/*" component={Error}></Route> */}
         </Switch>
       </Layout>
     </GlobalStyle>

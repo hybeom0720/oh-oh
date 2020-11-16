@@ -53,24 +53,24 @@ table {
 } 
 
 *{
-  font-size: 62.5%;
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
-  color: #212529;
   box-sizing: border-box;
 }
 
 body, html {
   width: 100%;
   height: 100vh;
-  background-color: #FaFaFa;
+  background-color: white;
 
+  color: #212529;
+  font-size: 62.5%;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
 `;
 
 function GlobalStyle({ children }) {
   return (
     <>
-      <ThemeProvider theme={palette}>
+      <ThemeProvider theme={{ palette }}>
         <GlobalStyleWrapper />
         {children}
       </ThemeProvider>
