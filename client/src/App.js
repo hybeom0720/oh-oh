@@ -8,7 +8,7 @@ import {
   Report,
   Detail,
   Error,
-} from "./pages/index.js";
+} from "./container/index.js";
 import { GlobalStyle, Layout } from "./styles/index.js";
 
 function App() {
