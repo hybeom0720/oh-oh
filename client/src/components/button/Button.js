@@ -1,16 +1,25 @@
 import React from "react";
 import * as S from "./style";
 
-function Button({ size, children, ...props }) {
+function Button({ buttonProps }) {
+  const { size, type, content, onClick } = buttonProps;
+
   return (
     <S.ButtonWrapper>
-      <S.ButtonBlock size={size}>{children}</S.ButtonBlock>
+      <S.ButtonBlock size={size} type={type} onClick={onClick}>
+        {content}
+      </S.ButtonBlock>
     </S.ButtonWrapper>
   );
 }
 
 Button.defaultProps = {
-  size: "80%",
+  buttonProps: {
+    size: "80%",
+    type: "plain",
+    content: "확인",
+    onClick: console.log("clicked"),
+  },
 };
 
 export default Button;

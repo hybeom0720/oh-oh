@@ -1,30 +1,26 @@
 import styled from "styled-components";
 
 export const IntroPage = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 2.4rem;
-  /* background-color: ${({ theme }) => theme.palette["ohLightGray"]}; */
+  padding: 4rem 2.4rem;
 
   font-size: 1.6rem;
 `;
 
-export const BannerBlock = styled.div`
+export const SlideBlock = styled.div`
   width: 100%;
-  padding: 25% 5% 10%;
+  height: 72vh;
+  overflow-x: hidden;
 `;
 
-export const BannerHeadText = styled.p`
-  padding-bottom: 1.8rem;
-
-  font-size: 2.4rem;
-  font-weight: bold;
-`;
-
-export const BannerSubText = styled.p`
-  margin: 0.4rem 0;
-  color: ${({ theme }) => theme.palette["ohDarkGray"]};
+export const SlideContainer = styled.div`
+  display: flex;
+  width: 300%;
 `;

@@ -57,9 +57,8 @@ table {
 }
 
 body, html {
-  width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: #FAFAFA;
 
   color: #212529;
   font-size: 62.5%;
