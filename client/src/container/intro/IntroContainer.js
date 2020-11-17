@@ -7,6 +7,7 @@ import Intro from "./Intro";
 
 function IntroContainer() {
   const history = useHistory();
+
   const goMainMap = () => {
     setCookie("permission", "true", {
       expires: new Date(Date.now() + ONE_WEEK),
@@ -18,6 +19,7 @@ function IntroContainer() {
 
     history.push("/mainMap");
   };
+
   const getLocation = (callback) => {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log(postion);

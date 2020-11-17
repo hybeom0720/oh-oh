@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import Index from "./Index";
@@ -9,7 +9,11 @@ function IndexContainer() {
 
   useEffect(() => {
     setTimeout(() => {
-      history.push("/intro");
+      if (getCookie("permission")) {
+        history.push("/mainMap");
+      } else {
+        history.push("/intro");
+      }
     }, 1000);
   }, []);
 
