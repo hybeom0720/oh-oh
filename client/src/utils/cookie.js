@@ -46,4 +46,4 @@ const deleteCookie = (name) => {
   });
 };
 
-export default { getCookie, setCookie, getToken, deleteCookie };
+export { getCookie, setCookie, getToken, deleteCookie };
