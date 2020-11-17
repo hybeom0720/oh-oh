@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-
 import { useHistory } from "react-router-dom";
+
 import Index from "./Index";
+import { getCookie } from "../../utils/cookie";
 
 function IndexContainer() {
   const history = useHistory();

@@ -13,4 +13,18 @@ export const IndexPage = styled.div`
   background-color: ${({ theme }) => theme.palette["ohRed"]};
   font-size: 3.2rem;
   font-weight: bold;
+  animation-name: fadeOut;
+  animation-duration: 1.1s;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 `;

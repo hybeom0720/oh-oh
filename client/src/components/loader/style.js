@@ -9,8 +9,8 @@ export const Loader = styled.div`
   & div {
     position: absolute;
     top: 33px;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: white;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
