@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Map from "./Map";
 import { KAKAO_APP_KEY } from "../../config/keys";
 
-function MapContainer() {
+function MapContainer({ location }) {
   const [map, setMap] = useState(null);
 
   const createMap = () => {

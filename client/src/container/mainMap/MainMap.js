@@ -1,8 +1,8 @@
 import React from "react";
-import Map from "../map/MapContainer";
+import MapContainer from "../map/MapContainer";
 
-function MainMap() {
-  return <Map></Map>;
+function MainMap({ location }) {
+  return <MapContainer location={location}></MapContainer>;
 }
 
 export default MainMap;

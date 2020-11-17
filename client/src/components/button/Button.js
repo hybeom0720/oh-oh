@@ -18,7 +18,7 @@ Button.defaultProps = {
     size: "80%",
     type: "plain",
     content: "확인",
-    onClick: console.log("clicked"),
+    onClick: null,
   },
 };
 
