@@ -14,7 +14,7 @@ export const ButtonBlock = styled.div`
   outline: none;
   border: none;
   width: ${(props) => props.size};
-  height: 4.8rem;
+  height: 5.2rem;
   border-radius: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   font-size: 1.6rem;

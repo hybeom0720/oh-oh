@@ -9,7 +9,7 @@ export const SlideBlock = styled.div`
 
 export const BannerBlock = styled.div`
   width: 100%;
-  padding: 25% 8% 10%;
+  padding: 0 12%;
 `;
 
 export const BannerHeadText = styled.p`
@@ -42,7 +42,7 @@ export const IndicatorElement = styled.div`
 
 export const PrevIconWrapper = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 5%;
 
   display: flex;
@@ -59,7 +59,7 @@ export const PrevIconWrapper = styled.div`
 
 export const NextIconWrapper = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 5%;
 
   display: flex;

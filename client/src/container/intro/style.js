@@ -9,14 +9,14 @@ export const IntroPage = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 4rem 2.4rem;
+  padding: 30% 0;
 
   font-size: 1.6rem;
 `;
 
 export const SlideBlock = styled.div`
   width: 100%;
-  height: 72vh;
+  height: 50vh;
   overflow-x: hidden;
 `;
 

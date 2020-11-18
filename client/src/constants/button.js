@@ -3,7 +3,7 @@ export const WHTIE = "#fff";
 
 export const SMALL = "20%";
 export const MIDIUM = "40%";
-export const LARGE = "80%";
+export const LARGE = "75%";
 
 export const SOLID = "solid";
 export const GHOST = "ghost";
