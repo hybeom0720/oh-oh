@@ -57,7 +57,7 @@ table {
 }
 
 body, html {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #FAFAFA;
 
   color: #212529;

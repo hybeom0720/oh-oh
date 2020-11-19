@@ -10,6 +10,7 @@ import {
   Detail,
   Error,
 } from "./container/index.js";
+import { MapProvider } from "./context";
 import { GlobalStyle, Layout } from "./styles/index.js";
 
 function App() {
@@ -19,8 +20,10 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <Index />}></Route>
           <Route path="/intro" render={() => <Intro />}></Route>
-          <Route path="/mainMap" render={() => <MainMap />}></Route>
-          <Route path="/searchMap" render={() => <SearchMap />}></Route>
+          <MapProvider>
+            <Route path="/mainMap" render={() => <MainMap />}></Route>
+            <Route path="/searchMap" render={() => <SearchMap />}></Route>
+          </MapProvider>
           <Route path="/report" render={() => <Report />}></Route>
           <Route path="/detail" render={() => <Detail />}></Route>
           <Route path="/*" render={() => <Error />}></Route>

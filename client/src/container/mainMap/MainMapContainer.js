@@ -14,7 +14,6 @@ function MainMapContainer() {
       longitude: position.coords.longitude,
     };
     setLocation(locationObject);
-    console.log(locationObject);
   };
 
   const error = (error) => {
@@ -28,14 +27,20 @@ function MainMapContainer() {
   // }, [success, error]);
 
   const getLocation = () => {
-    navigator.geolocation.getCurrentPosition(success, error, { maximumAge: 0 });
+    navigator.geolocation.getCurrentPosition(success, error);
+    console.log("hihi");
   };
 
   useEffect(() => {
     getLocation();
   }, []);
 
-  return <MainMap location={location}></MainMap>;
+  const mainMapProps = {
+    location,
+    getLocation,
+  };
+
+  return <MainMap mainMapProps={mainMapProps}></MainMap>;
 }
 
 export default MainMapContainer;
