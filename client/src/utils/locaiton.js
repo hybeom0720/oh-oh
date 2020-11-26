@@ -1,11 +1,10 @@
 const error = (error) => {
   console.log(error);
-  alert(error.code);
 };
 
 const options = {
   maximumAge: 0,
-  timeout: 5000,
+  timeout: 10000,
 };
 
 export const setLocation = (mapDispatch) => {

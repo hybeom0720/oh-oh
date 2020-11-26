@@ -8,7 +8,14 @@ import { KAKAO_APP_KEY } from "../../config/keys";
 function MapContainer({}) {
   const { center } = useMapState();
   const mapDispatch = useMapDispatch();
-  // const [map, setMap] = useState(null);
+  const [map, setMap] = useState(null);
+
+  const setCenter = () => {
+    setLocation(mapDispatch);
+    const moveLatLon = new kakao.maps.LatLng(center.latitude, center.longitude);
+
+    map.setCenter(moveLatLon);
+  };
 
   const createMap = (center) => {
     document.getElementById("kakao-map").innerHTML = " ";
@@ -27,6 +34,7 @@ function MapContainer({}) {
           level: 4,
         };
         const createdMap = new kakao.maps.Map(container, options);
+        setMap(createdMap);
       });
     };
   };
@@ -34,14 +42,15 @@ function MapContainer({}) {
   useEffect(() => {
     if (center) {
       createMap(center);
-      console.log("실행했냐");
     } else {
       setLocation(mapDispatch);
     }
-    console.log("가냐");
   }, [center]);
 
-  return <Map></Map>;
+  const mapProps = {
+    setCenter,
+  };
+  return <Map mapProps={mapProps}></Map>;
 }
 
 export default MapContainer;

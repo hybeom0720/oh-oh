@@ -47,12 +47,14 @@ function Intro({ goMainMap }) {
     content: "다음",
     onClick: nextSlide,
   };
+
   const agreeButtonProps = {
     size: LARGE,
     type: SOLID,
     content: "동의하고 시작하기",
     onClick: goMainMap,
   };
+
   const slideProps = {
     totalSlides: TOTAL_SLIDES + 1,
     currentSlide,
