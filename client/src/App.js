@@ -23,8 +23,8 @@ function App() {
           <MapProvider>
             <Route path="/mainMap" render={() => <MainMap />}></Route>
             <Route path="/searchMap" render={() => <SearchMap />}></Route>
+            <Route path="/report" render={() => <Report />}></Route>
           </MapProvider>
-          <Route path="/report" render={() => <Report />}></Route>
           <Route path="/detail" render={() => <Detail />}></Route>
           <Route path="/*" render={() => <Error />}></Route>
         </Switch>

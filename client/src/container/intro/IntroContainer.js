@@ -20,12 +20,6 @@ function IntroContainer() {
     history.push("/mainMap");
   };
 
-  const getLocation = (callback) => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(postion);
-    });
-  };
-
   return <Intro goMainMap={goMainMap} />;
 }
 

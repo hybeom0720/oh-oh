@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from "react";
 
 import Map from "./Map";
+import { useMapState, useMapDispatch } from "../../context/MapContext";
+import { setLocation } from "../../utils/locaiton";
 import { KAKAO_APP_KEY } from "../../config/keys";
 
-function MapContainer({ location }) {
+function MapContainer({}) {
+  const { center } = useMapState();
+  const mapDispatch = useMapDispatch();
   const [map, setMap] = useState(null);
 
-  const createMap = () => {
+  const setCenter = () => {
+    setLocation(mapDispatch);
+    const moveLatLon = new kakao.maps.LatLng(center.latitude, center.longitude);
+
+    map.setCenter(moveLatLon);
+  };
+
+  const createMap = (center) => {
     document.getElementById("kakao-map").innerHTML = " ";
 
     const script = document.createElement("script");
@@ -19,7 +30,7 @@ function MapContainer({ location }) {
       const { kakao } = window;
       kakao.maps.load(() => {
         let options = {
-          center: new kakao.maps.LatLng(location.latitude, location.longitude),
+          center: new kakao.maps.LatLng(center.latitude, center.longitude),
           level: 4,
         };
         const createdMap = new kakao.maps.Map(container, options);
@@ -29,10 +40,17 @@ function MapContainer({ location }) {
   };
 
   useEffect(() => {
-    createMap();
-  }, [location.latitude]);
+    if (center) {
+      createMap(center);
+    } else {
+      setLocation(mapDispatch);
+    }
+  }, [center]);
 
-  return <Map></Map>;
+  const mapProps = {
+    setCenter,
+  };
+  return <Map mapProps={mapProps}></Map>;
 }
 
 export default MapContainer;
